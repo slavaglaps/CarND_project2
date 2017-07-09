@@ -68,25 +68,25 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| Convolution 5x5     	| 1x1 stride, valid paddin 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 			    	|
-| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16   |
+| Max pooling	      	| 2x2 stride,  			    	|
+| Convolution 5x5	    | 1x1 stride, valid padding  |
 |	RELU				|												|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x16 			    	|
+| Max pooling	      	| 2x2 stride	    	|
 |	Flatten				| outputs 400									|
-| Fully connected		| outputs 180  									|
-|	RELU				| dropout 0.6									|
-| Fully connected		| outputs 90  									|
-|	RELU				| dropout 0.6									|
-| Fully connected		| outputs 43  									|
+| Fully connected		| 									|
+|	RELU				| dropout 							|
+| Fully connected		| 									|
+|	RELU				| dropout 								|
+| Fully connected		| outputs  									|
 | Softmax				| tf.nn.softmax_cross_entropy_with_logits()     |
  
 
 
 #### 3.3 Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used the adam optimizer. Total epochs is 20 with batch size equals to 128. 
+To train the model, I used the adam optimizer. Total epochs is 60 with batch size equals to 256. 
 
 Hyperparameters includes learning rate, keep probablity, mu and sigma. Learning rate is 0.0006. Keep probablity is 0.6. Mu is 0 and sigma is 0.1.
 
@@ -97,7 +97,7 @@ Pre-process method is set to 'norm' which stands for normalization.
 My final model results were:
 * training set accuracy of 0.995
 * validation set accuracy of 0.984 
-* test set accuracy of 0.928
+* test set accuracy of 0.95
 
 The LeNet model was choosen as a starting point for traffic sign classification bacause of its simplicity and proven effectiveness in classification of images that have similarities. The convolution layer can extract features and the fully connected layers can be trained to properly make decisions.
 
